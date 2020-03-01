@@ -49,6 +49,15 @@ class Company extends Model
         return $this->hasMany(Contact::class);
     }
 
+     /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

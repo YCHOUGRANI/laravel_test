@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="btn-group float-right" role="group">
-                            <a href="{{ route('companies.create') }}" class="btn btn-success">Add new</a>
+                            <a href="{{ route('companies-create') }}" class="btn btn-success">Add new</a>
                         </div>
                         <h2>
                             Companies
@@ -31,8 +31,8 @@
                                     <td>{{ $company->id }}</td>
                                     <td>{{ $company->name }}</td>
                                     <td>{{ $company->companyType->name }}</td>
-                                    <td>{{ $company->company_status }}</td>
-                                    <td><a href="{{ route('companies.edit', $company) }}"
+                                    <td>{{ $company->companyStatus->name }}</td>
+                                    <td><a href="{{ route('companies-edit', $company) }}"
                                            class="btn btn-primary">Edit</a></td>
                                 </tr>
                             @endforeach

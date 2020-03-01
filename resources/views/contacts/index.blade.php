@@ -3,11 +3,11 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <div class="btn-group float-right" role="group">
-                            <a href="{{ route('contacts.create') }}" class="btn btn-success">Add new</a>
+                            <a href="{{ route('contacts-create') }}" class="btn btn-success">Add new</a>
                         </div>
                         <h2>
                             Contacts
@@ -35,7 +35,7 @@
                                     <td>{{ $contact->contactRole->name }}</td>
                                     <td>{{ $contact->company->name }} ({{ $contact->company->companyType->name }})</td>
                                     <td>{{ $contact->company->companyStatus->name }}</td>
-                                    <td><a href="{{ route('contacts.edit', $contact) }}"
+                                    <td><a href="{{ route('contacts-edit', $contact) }}"
                                            class="btn btn-primary">Edit</a></td>
                                 </tr>
                             @endforeach

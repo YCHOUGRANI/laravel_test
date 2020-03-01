@@ -30,7 +30,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Contact extends Model
 {
-
+    
     /**
      * The attributes that are mass assignable.
      *
@@ -39,7 +39,8 @@ class Contact extends Model
     protected $fillable = [
         'first_name',
         'last_name',
-        'company_id'
+        'company_id',
+         'contact_role_id'
     ];
 
     /**
@@ -57,5 +58,11 @@ class Contact extends Model
     {
         return $this->belongsTo(ContactRole::class);
     }
+
+     public function addresses()
+    {
+        return $this->hasMany(Address::class);
+    }
+
 
 }
